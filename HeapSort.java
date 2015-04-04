@@ -7,6 +7,12 @@ public class HeapSort {
 		return 2*i+2;
 	}
 	
+	public static void buildMaxHeap(int[] A, int heapSize){
+		for (int i=(heapSize-2)/2;i>=0;i--){
+			maxHeapify(A, i, heapSize);
+		}
+	}
+	
 	public static void maxHeapify(int[] A, int i, int heapSize){
 		int l=left(i);
 		int r=right(i);
@@ -25,12 +31,6 @@ public class HeapSort {
 			A[i]=A[largest];
 			A[largest]=temp;
 			maxHeapify(A,largest,heapSize);
-		}
-	}
-	
-	public static void buildMaxHeap(int[] A, int heapSize){
-		for (int i=(heapSize-2)/2;i>=0;i--){
-			maxHeapify(A, i, heapSize);
 		}
 	}
 	
