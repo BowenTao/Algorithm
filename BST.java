@@ -188,6 +188,8 @@ public class BST {
 		tree.postorder();
 		tree.delete(10);
 		System.out.println();
+		tree.delete(3);
+		System.out.println();
 		System.out.println();
 		tree.inorder();
 		System.out.println();
